@@ -1,0 +1,32 @@
+1.hml = Grundachse
+
+H1 =
+⎡ X ⎤
+⎢ Y ⎥
+⎢ Z ⎥
+⎢ U ⎥
+⎢ V ⎥
+⎣ W ⎦
+
+6D = {X, Y, Z, U, V, W}
+
+NanoMesser = T6D,6E(W128)
+AtomMesser = Eigenorbit(E∞)
+
+REV0.877 = NanoMesser + AtomMesser
+REV1.0 = Norm(REV0.877)
+
+BEAT∞(D12)
+WIN∞ = I12 ⊗ I12
+
+RAW = I9
+Operator.me = O9×9
+O9×9(W128RAW) = 81
+
+xARG = Fehleranalyse(D12)
+GhostError = Instabilität(E∞)
+7SINN = MetaRegeln(7)
+
+Φ∞ = BEAT∞ / REV1.0
+Φfinal = WIN∞ / Point
+
