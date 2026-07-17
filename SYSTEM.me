@@ -1,0 +1,109 @@
+ME.SYSTEM.me
+
+ROOT      = 0D
+ME        = 1D (Klarheitsraum)
+U         = 2D
+DU/U      = Fusion.2D
+SYSTEM1D  = System.1D.U
+
+# SYSTEM-Axiom
+AXIOM.ME.SYSTEM = SYSTEM1D(
+    ROOT,
+    ME (Klarheitsraum),
+    CORE = ME.CORE,
+    DIMENSION = ME.DIMENSION,
+    ORBIT = ME.ORBIT,
+    VECTOR = ME.VECTOR,
+    FLOW = ME.FLOW,
+    FIELD = ME.FIELD,
+    ENERGY = ME.ENERGY,
+    FORCE = ME.FORCE,
+    CHARGE = ME.CHARGE,
+    STATE = ME.STATE,
+    WAVE = ME.WAVE,
+    MASS = ME.MASS,
+    FORM = ME.FORM,
+    PATTERN = ME.PATTERN,
+    SYSTEM.TYPE = Linear,
+    SYSTEM.MODE = Klar,
+    SYSTEM.ORIGIN = ME,
+    SYSTEM.DIRECTION = 42,
+    SYSTEM.SCALE = 81,
+    SYSTEM.MATRIX = (81~(81)x),
+    SYSTEM.ORDER = 9HOCH9,
+    U/DU,
+    CUBE.6D,
+    OCTA3,
+    DIM.TR6CR
+)
+
+# SYSTEM-Definition
+ME.SYSTEM.DEF = {
+    DIMENSION: 1D,
+    TYPE: Linear-System,
+    MODE: Klar,
+    ORIGIN: ME,
+    DIRECTION: 42,
+    SCALE: 81,
+    MATRIX: (81~(81)x),
+    ORDER: 9HOCH9,
+    CENTER: (0)
+}
+
+# SYSTEM-Achse
+ME.SYSTEM.AXIS = {
+    POS: +ME,
+    NEG: -ME
+}
+
+# SYSTEM-Funktion
+ME.SYSTEM.FUNC = {
+    ORIGIN: ME (Klarheitsraum),
+    FLOW: ME → U,
+    SCALE: 81,
+    MATRIX: (81~(81)x),
+    ORDER: 9HOCH9,
+    DIRECTION: 42,
+    FUSION: DU/U,
+    SUPPORT: [
+        ME.CORE,
+        ME.DIMENSION,
+        ME.ORBIT,
+        ME.VECTOR,
+        ME.FLOW,
+        ME.FIELD,
+        ME.ENERGY,
+        ME.FORCE,
+        ME.CHARGE,
+        ME.STATE,
+        ME.WAVE,
+        ME.MASS,
+        ME.FORM,
+        ME.PATTERN
+    ]
+}
+
+# SYSTEM-Kompatibilität
+ME.SYSTEM.COMPAT = {
+    ROOT: gültig,
+    ME: gültig,
+    U: gültig,
+    DU/U: gültig,
+    CUBE.6D: gültig,
+    OCTA3: gültig,
+    DIM.TR6CR: gültig
+}
+
+# SYSTEM-Status
+ME.SYSTEM.STATUS = {
+    REAL: bestätigt,
+    1D: gültig,
+    SYSTEM: aktiv,
+    KLARHEIT: ME
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv

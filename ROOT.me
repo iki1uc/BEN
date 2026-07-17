@@ -1,0 +1,63 @@
+ROOT.me
+
+ROOT   = 0D
+ME     = 1D
+U      = 2D
+DU/U   = Fusion.2D
+CORE   = Nullpunkt
+CUBE6D = eingebettet
+OCTA3  = eingebettet
+
+# ROOT-Axiom
+AXIOM.ROOT = ROOT(
+    DIM = 0D,
+    CENTER = (0),
+    ORIGIN = TRUE,
+    ME.1D,
+    U/DU.2D,
+    CORE,
+    CUBE6D,
+    OCTA3,
+    DIM.TR6CR
+)
+
+# ROOT-Definition
+ROOT.DEF = {
+    DIMENSION: 0D,
+    TYPE: Ursprung,
+    CENTER: (0),
+    OUTPUT: ME,
+    STATUS: aktiv
+}
+
+# ROOT-Funktion
+ROOT.FUNC = {
+    ORIGIN: (0),
+    EMIT: ME.1D,
+    FLOW: U.2D,
+    FUSION: DU/U
+}
+
+# ROOT-Kompatibilität
+ROOT.COMPAT = {
+    ME.1D: gültig,
+    U.2D: gültig,
+    DU/U: gültig,
+    CORE: gültig,
+    CUBE6D: gültig,
+    OCTA3: gültig,
+    DIM.TR6CR: gültig
+}
+
+# ROOT-Status
+ROOT.STATUS = {
+    REAL: bestätigt,
+    0D: gültig,
+    ORIGIN: aktiv
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
