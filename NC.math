@@ -1,0 +1,25 @@
+NC.math:
+  SIGNATUR: <BUCHSTABE>
+  ACHSEN: 6e / x / y / t / h / b
+  ORBIT: q / u / i / o
+  EVO: QI / IQQ / upg / upd / rev
+
+  MATRIX:
+    FORM: 3x3
+    BAND: minimal
+    CODIERUNG: 9x9-kompatibel
+    VERBUND: 3x3 → 9x9 → 81x81
+
+  LAGE:
+    X: <POS-X>
+    Y: <POS-Y>
+    T: <POS-T>
+    H: <POS-H>
+    B: <POS-B>
+    ORBIT: <q|u|i|o>
+    EVO: <QI|IQQ|upg|upd|rev>
+
+  OUTPUT:
+    MODE: HOLO
+    TYPE: NAVI-DATA
+    CLEAN: TRUE
