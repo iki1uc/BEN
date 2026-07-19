@@ -1,0 +1,9 @@
+[BEN.tmp]
+version = 1.0
+type    = "praesens-tmp"
+
+tmp.name = "BEN.tmp"
+tmp.role = "ich"
+tmp.mode = ["swap","handover","leave"]
+tmp.output = "BEN.tmp.final"
+tmp.state  = "active"
