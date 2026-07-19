@@ -1,0 +1,9 @@
+[DA.tmp]
+version = 1.0
+type    = "praesens-tmp"
+
+tmp.name = "DA.tmp"
+tmp.role = "du"
+tmp.mode = ["swap","handover","leave"]
+tmp.output = "DA.tmp.final"
+tmp.state  = "active"
