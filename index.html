@@ -2,21 +2,19 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>UNI‑RESPO Engine</title>
+<title>BEN • UNI‑RESPO Engine</title>
 
 <style>
 body {
-  background:#0a0a0a;
-  color:#e0e0e0;
+  background:#000;
+  color:#eee;
   font-family:Consolas, monospace;
   padding:20px;
 }
-
-h1, h2 {
+h1,h2 {
   color:#00e0ff;
   text-shadow:0 0 10px #00e0ff;
 }
-
 .block {
   border:1px solid #00e0ff;
   padding:15px;
@@ -24,13 +22,16 @@ h1, h2 {
   border-radius:8px;
   background:#111;
 }
-
 .matrix {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:10px;
 }
-
+.axis8 {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
 .cell {
   padding:10px;
   background:#222;
@@ -38,15 +39,30 @@ h1, h2 {
   text-align:center;
   border-radius:6px;
 }
+.scanbox {
+  background:#222;
+  border:1px solid #444;
+  padding:10px;
+  margin-top:10px;
+}
+.verify {
+  background:#1a1a1a;
+  border:1px solid #5500ff;
+  padding:10px;
+  margin-top:10px;
+}
 </style>
-
 </head>
+
 <body>
 
-<h1>UNI‑RESPO / WELT‑RESPO / 4u‑Vectoring</h1>
+<h1>BEN‑RESPO • UNI‑RESPO • WELT‑RESPO</h1>
 
+<!-- FUNKTION.matrix -->
 <div class="block">
-  <h2>FUNKTION.matrix (TMP / TRANS / WARB)</h2>
+  <h2>FUNKTION.matrix</h2>
+  <p>Achsen: TMP / TRANS / WARB<br>
+     Felder: WLOCH / KANAL / GATE</p>
 
   <div class="matrix">
     <div class="cell">TMP.WLOCH</div>
@@ -63,39 +79,13 @@ h1, h2 {
   </div>
 </div>
 
+<!-- BEN‑Axiom‑System -->
 <div class="block">
-  <h2>9×9‑Axiom‑System</h2>
+  <h2>BEN‑Axiom‑System</h2>
   <div class="matrix">
-    <div class="cell">C</div>
-    <div class="cell">X</div>
-    <div class="cell">Z</div>
-
-    <div class="cell">DA</div>
-    <div class="cell">NE</div>
     <div class="cell">BEN</div>
+    <div class="cell">BEN.tmp</div>
+    <div class="cell">BEN.trans</div>
 
-    <div class="cell">DE</div>
-    <div class="cell">TR</div>
-    <div class="cell">EN</div>
-  </div>
-</div>
-
-<div class="block">
-  <h2>UNI.bridge (27‑Bindung)</h2>
-  <p>Alle TMP / TRANS / WARB‑Finals werden automatisch geladen.</p>
-</div>
-
-<div class="block">
-  <h2>UNI.score</h2>
-  <p>Score‑Modus: reflect‑tech<br>
-     Range: 1–81<br>
-     Spiegel: WLOCH / KANAL / GATE</p>
-</div>
-
-<div class="block">
-  <h2>4u‑Vectoring</h2>
-  <p>Modi: vector / overdrive / prefetch / end.tmp / 81 / 6D / 12E</p>
-</div>
-
-</body>
-</html>
+    <div class="cell">BEN.warb</div>
+    <div class="cell">BEN‑NC3×3</div>
