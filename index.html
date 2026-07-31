@@ -1,58 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>BEN · Vollendung (9) · Positiv-Axiom</title>
-
+<title>BEN – Balance‑Raum</title>
 <style>
-body { background:#000; color:#0f0; font-family:Consolas, monospace; padding:20px; }
-pre { background:#111; padding:10px; border-left:3px solid #0f0; }
-button { background:#0f0; color:#000; padding:10px 20px; border:none; cursor:pointer; }
+body {
+  font-family: serif;
+  background: #fafafa;
+  padding: 40px;
+  color: #222;
+}
+.section {
+  margin: 20px auto;
+  max-width: 700px;
+  padding: 20px;
+  border-left: 4px solid #444;
+  background: white;
+}
+a {
+  color: #444;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
 </style>
 </head>
-
 <body>
 
-<h1>BEN · Vollendung (9) · Positiv-Axiom</h1>
+<h1>BEN – Balance‑Raum</h1>
 
-<button onclick="RUN_BEN()">BEN START</button>
+<div class="section">
+  <h2>Dokumente (NEU)</h2>
+  <p><a href="README.md">README.md</a></p>
+  <p><a href="ID.html">ID.html</a></p>
+</div>
 
-<pre id="out">BEN wartet…</pre>
+<div class="section">
+  <h2>CSV‑Achsen</h2>
+  <ul>
+    <li><a href="achse-bedeutung-8.csv">Achse Bedeutung</a></li>
+    <li><a href="achse-funktion-3.csv">Achse Funktion</a></li>
+    <li><a href="achse-modul-12.csv">Achse Modul</a></li>
+    <li><a href="achse-quelle-12.csv">Achse Quelle</a></li>
+    <li><a href="zustand-bedeutung-4.csv">Zustand Bedeutung</a></li>
+  </ul>
+</div>
 
-<script type="module">
+<div class="section">
+  <h2>Altes System</h2>
+  <ul>
+    <li>BEN.tmp</li>
+    <li>BENNC3.room</li>
+    <li>BENNC6D.room</li>
+    <li>BENNC9.room</li>
+    <li>NC.math</li>
+    <li>Axiom.js</li>
+    <li>KI_AXIOM.js</li>
+    <li>ECO.js</li>
+    <li>Operator.js</li>
+    <li>KIuPREFETCH.js</li>
+    <li>async.js</li>
+    <li>ghost.html</li>
+    <li>verify.html</li>
+    <li>X.room.CORE</li>
+    <li>X.room.IN</li>
+    <li>X.room.OUT</li>
+    <li>*.tmp Dateien</li>
+  </ul>
+</div>
 
-import { BEN_AXIOM } from "./Axiom.js";
-import { BEN_PREFETCH } from "./async.js";
-import { BEN_LOAD_LOGIC } from "./Operator.js";
-import { BEN_GHOST } from "./ghost.html";
-import { BEN_VERIFY } from "./verify.html";
-import { BEN_ECO } from "./ECO.js";
-
-async function RUN_BEN() {
-
-    const pre = await BEN_PREFETCH();
-    const logic = await BEN_LOAD_LOGIC();
-
-    const ghost = BEN_GHOST(pre);
-    const verify = BEN_VERIFY(pre.alt.tmpDA, pre.alt.tmpNE, pre.alt.tmpBEN);
-
-    const eco = BEN_ECO(pre, logic);
-
-    const out = {
-        axiome: BEN_AXIOM,
-        prefetch: pre,
-        logic,
-        ghost,
-        verify,
-        eco,
-        state: "BEN-READY"
-    };
-
-    document.getElementById("out").innerText =
-        JSON.stringify(out, null, 2);
-}
-
-</script>
+<div class="section">
+  <h2>Verständnis für alle</h2>
+  <p>Shogun = Raum · Schach = Regel · Skat = Mensch</p>
+</div>
 
 </body>
 </html>
